@@ -1,28 +1,75 @@
-
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4b0082, #000000);
-  color: white;
   margin: 0;
-  padding: 0;
+  background: #f4f4f4;
+  color: #333;
 }
 
-header, footer {
-  background-color: #23003a;
-  padding: 1em;
-  text-align: center;
+header {
+  background: #2c0055;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.tiktok-link img {
+header img.logo {
   width: 50px;
-  transition: transform 0.3s ease-in-out;
 }
 
-.tiktok-link:hover img {
-  animation: wiggle 0.5s infinite;
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
+nav a.active {
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(to right, #5a189a, #7b2cbf);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.fitur {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #fff;
+}
+
+.fitur div {
+  width: 30%;
+  background: #eee;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 20px;
+  background: #fff;
+}
+
+.struktur {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.posisi {
+  background: #ddd;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+footer {
+  background: #2c0055;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }

@@ -1,31 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karang Taruna BARET</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karang Taruna BARET</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Website Karang Taruna BARET</h1>
-        <p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
-    </header>
-    <main style="text-align: center; margin-top: 50px;">
-        <h2>Ikuti Kami di TikTok</h2>
-        <a href="https://www.tiktok.com/@baret.barisan.rem" class="tiktok-link" onclick="playClickSound()">
-            <img src="indextiktokicon.png" alt="TikTok Icon">
-        </a>
-        <audio id="clickSound" src="click.mp3" preload="auto"></audio>
-    </main>
-    <footer>
-        <p>&copy; 2025 Karang Taruna BARET. All rights reserved.</p>
-    </footer>
-    <script>
-        function playClickSound() {
-            document.getElementById("clickSound").play();
-        }
-    </script>
+  <header>
+    <img src="logo.gif" alt="Logo BARET" class="logo" />
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat Datang di Website Karang Taruna BARET</h1>
+    <p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
+  </section>
+
+  <section class="fitur">
+    <div><h3>BARET</h3><p>Karang Taruna BARET aktif di bidang sosial dan kepemudaan.</p></div>
+    <div><h3>Kegiatan</h3><p>Berbagai kegiatan positif dan pengembangan generasi muda.</p></div>
+    <div><h3>Komunitas</h3><p>Menghubungkan pemuda Dusun Tempel dalam satu semangat.</p></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Karang Taruna BARET. All rights reserved.</p>
+  </footer>
 </body>
 </html>
