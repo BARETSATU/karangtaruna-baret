@@ -2,37 +2,97 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Struktur Organisasi</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #1a1a1a, #320b57);
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      margin-top: 40px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    td {
+      border: 1px solid white;
+      padding: 10px;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    .struktur-container {
+        border: 2px solid #7f00ff;
+        border-radius: 10px;
+        padding: 20px;
+        background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+        color: white;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+    .struktur-container:hover {
+        transform: scale(1.02);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid #aaa;
+        padding: 10px;
+        text-align: center;
+    }
+    td i {
+        margin-right: 8px;
+        color: #ffd700;
+    }
+</style>
 </head>
 <body>
-  <header>
-    <img src="logo.gif" alt="Logo BARET" class="logo" />
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="struktur.html" class="active">Struktur</a>
-      <a href="galeri.html">Galeri</a>
-    </nav>
-  </header>
-
-  <section class="content">
-    <h2>Struktur Organisasi</h2>
-    <div class="struktur">
-      <div class="posisi"><strong>Ketua:</strong><br>Sugiono, Joko</div>
-      <div class="posisi"><strong>Sekretaris:</strong><br>Supriyadi, Suroso</div>
-      <div class="posisi"><strong>Bendahara:</strong><br>Sihmadi, Wahyu (IS)</div>
-      <div class="posisi"><strong>Seksi Humas:</strong><br>- , -</div>
-      <div class="posisi"><strong>Seksi Keamanan:</strong><br>- , -</div>
-      <div class="posisi"><strong>Seksi Agama:</strong><br>- , -</div>
-      <div class="posisi"><strong>Seksi Perlengkapan:</strong><br>- , -</div>
-      <div class="posisi"><strong>Admin Sosmed:</strong><br>- , -</div>
-      <div class="posisi"><strong>Seksi Kesenian:</strong><br>- , -</div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Karang Taruna BARET</p>
-  </footer>
+  <h1>Struktur Organisasi Karang Taruna BARET</h1>
+  <table>
+    <tr>
+      <td colspan="4"><i class="fas fa-user-tie"></i> KETUA<br><strong>SUGIONO<br>JOKO</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2"><i class="fas fa-file-alt"></i> SEKRETARIS<br><strong>SUPRIYADI<br>SUROSO</strong></td>
+      <td colspan="2"><i class="fas fa-coins"></i> BENDAHARA<br><strong>SIHMADI<br>WAHYU (IS)<br>DEVI</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2"><i class="fas fa-bullhorn"></i> SEKSI HUMAS<br>-</td>
+      <td colspan="2"><i class="fas fa-shield-alt"></i> SEKSI KEAMANAN<br>-</td>
+    </tr>
+    <tr>
+      <td colspan="2"><i class="fas fa-tools"></i> SEKSI PERLENGKAPAN<br>-</td>
+      <td colspan="2"><i class="fas fa-paint-brush"></i> SEKSI KESENIAN<br>-</td>
+    </tr>
+  </table>
 </body>
 </html>
