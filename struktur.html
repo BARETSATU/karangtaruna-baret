@@ -2,29 +2,70 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Struktur Organisasi BARET</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, black, purple);
+      color: white;
+      text-align: center;
+    }
+    .chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .box {
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      width: fit-content;
+    }
+    .line {
+      height: 30px;
+      border-left: 2px solid white;
+      margin-bottom: 10px;
+    }
+    .horizontal {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 10px;
+    }
+    ul {
+      list-style: decimal;
+      text-align: left;
+      margin-left: 20px;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="logo.gif" alt="Logo BARET" class="logo">
-    <h1>Struktur Organisasi Karang Taruna BARET</h1>
-    <p>Dusun Tempel - Didirikan sejak 1990</p>
-  </header>
-
-  <section class="struktur">
-    <p><strong>Ketua:</strong> Ms Sugiono</p>
-    <p><strong>Wakil Ketua:</strong> Ms Joko</p>
-    <p><strong>Bendahara 1:</strong> Ms Sihmadi</p>
-    <p><strong>Bendahara 2:</strong> Ms Wahyu (IS)</p>
-    <p><strong>Bendahara 3:</strong> Mb Devi</p>
-    <p><strong>Sekretaris 1:</strong> Ms Yadi</p>
-    <p><strong>Sekretaris 2:</strong> Ms M. Suroso NR</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Karang Taruna BARET. All rights reserved.
-  </footer>
+  <h1>Struktur Organisasi Karang Taruna BARET</h1>
+  <div class="chart">
+    <div class="box"><strong>KETUA</strong><br>NANANG</div>
+    <div class="line"></div>
+    <div class="horizontal">
+      <div>
+        <div class="box"><strong>SEKRETARIS</strong><br>JOHAN</div>
+      </div>
+      <div>
+        <div class="box"><strong>BENDAHARA</strong><br>NURYANTO</div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="box">
+      <strong>ANGGOTA</strong>
+      <ul>
+        <li>BUDIONO</li>
+        <li>SUYUTI</li>
+        <li>WAHYUDI</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
