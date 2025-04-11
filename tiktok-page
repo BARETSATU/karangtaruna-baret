@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karang Taruna BARET</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .social-media-buttons {
+            margin-top: 20px;
+        }
+        .social-media-buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .tiktok {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Website Karang Taruna BARET</h1>
+    <p>Ikuti kami di TikTok!</p>
+
+    <div class="social-media-buttons">
+        <!-- Tombol TikTok -->
+        <a href="https://www.tiktok.com/@baret.barisan.rem?_t=ZS-8vQwWRxHutO&_r=1" target="_blank" class="tiktok">
+            TikTok
+        </a>
+    </div>
+</body>
+</html>
