@@ -1,28 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tentang Kami</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Karang Taruna BARET</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6ecf2; /* light gray background */
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            background-color: #002060; /* dark blue header */
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .box {
+            background: #ffffff;
+            border: 2px solid #002060;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+        }
+        .scrolling-text {
+            position: absolute;
+            width: 100%;
+            animation: scroll-up 40s linear infinite;
+            color: #002060;
+        }
+        @keyframes scroll-up {
+            0% {
+                top: 100%;
+            }
+            100% {
+                top: -100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="logo.gif" alt="Logo BARET" class="logo" />
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html" class="active">Tentang</a>
-      <a href="struktur.html">Struktur</a>
-      <a href="galeri.html">Galeri</a>
-    </nav>
-  </header>
-
-  <section class="content">
-    <h2>Tentang Karang Taruna BARET</h2>
-    <p>Karang Taruna BARET berdiri sejak tahun 1990 di Dusun Tempel. Organisasi ini bertujuan untuk membina generasi muda dalam kegiatan sosial, keagamaan, kesenian, dan keamanan lingkungan.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Karang Taruna BARET</p>
-  </footer>
+    <div class="container">
+        <h1>Visi & Misi Karang Taruna BARET</h1>
+        <div class="box">
+            <div class="scrolling-text">
+                <h2>Visi</h2>
+                <p>Mempererat tali persaudaraan antar pemuda untuk meningkatkan partisipasi pemuda dalam kegiatan-kegiatan yang bermanfaat di masyarakat guna meningkatkan peran organisasi kepemudaan.</p>
+                <p>Mewujudkan generasi muda yang berilmu pengetahuan, kreatif, Mandiri, tangguh, beriman , berkualitas dan bertanggung jawab.</p>
+                <h2>Misi</h2>
+                <ul>
+                    <li>Terwujudnya pemuda-pemudi yang bertakwa kepada Tuhan Yang Maha Esa penuh perhatian dan peka terhadap masalah dengan daya tahan fisik dan mental yang kuat dan Teguh dalam pendiriannya serta mampu berkreasi dan berkarya di lingkungan masyarakat.</li>
+                    <li>Membangun dan meningkatkan Ekonomi Produktif.</li>
+                    <li>Kepedulian terhadap lingkungan sosial masyarakat.</li>
+                    <li>Menggalang kemitraan dengan berbagai pihak yang berkompeten dalam masalah Pemuda dan sosial kemasyarakatan.</li>
+                    <li>Terwujudnya kesejahteraan sosial yang semakin meningkat bagi warga Desa Maracang pada umumnya dan khususnya generasi muda yang memungkinkan pelaksanaan fungsi sosialnya sebagai manusia pembangunan yang mampu mengatasi masalah sosial di lingkungannya.</li>
+                    <li>Melestarikan kesenian daerah serta pembangunan minat untuk berolahraga.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
