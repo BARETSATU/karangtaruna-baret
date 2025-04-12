@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karang Taruna BARET</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karang Taruna BARET</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
     .sosmed-buttons {
       text-align: center;
       margin: 40px 0;
@@ -42,84 +43,86 @@
     .sosmed-buttons .tiktok:hover {
       background-color: #333;
     }
-  
-    .sosmed-buttons .whatsapp {
-      background-color: #25D366;
-    }
-
-    .sosmed-buttons .whatsapp:hover {
-      background-color: #1ebe5b;
-    }
-
-  
-    .sosmed-buttons a {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sosmed-buttons a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -150%;
-      width: 150%;
-      height: 100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0));
-      animation: slide-light 4s ease-in-out infinite;
-    }
-
-    @keyframes slide-light {
-      0% {
-        left: -150%;
-      }
-      50% {
-        left: 100%;
-      }
-      100% {
-        left: 150%;
-      }
-    }
-
   </style>
-</head>
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.popup-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+  font-family: sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+</style></head>
 <body>
-  <header>
-    <img src="logo.gif" alt="Logo BARET" class="logo" />
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="struktur.html">Struktur</a>
-      <a href="galeri.html">Galeri</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Selamat Datang di Website Karang Taruna Tunas Harapan Tempel BARET</h1>
-    <p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
-  </section>
-
-  <section class="fitur">
-    <div><h3>BARET</h3><p>Karang Taruna BARET aktif di bidang sosial dan kepemudaan.</p></div>
-    <div><h3>Kegiatan</h3><p>Berbagai kegiatan positif dan pengembangan generasi muda.</p></div>
-    <div><h3>Komunitas</h3><p>Menghubungkan pemuda Dusun Tempel dalam satu semangat.</p></div>
-  </section>
-
-  <!-- Tombol Sosial Media -->
-  <div class="sosmed-buttons">
-    <a href="https://www.instagram.com/brt_baretempel?igsh=NzZzazRjd3pzdGcx" class="instagram" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
+<header>
+<img alt="Logo BARET" class="logo" src="logo.gif"/>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="tentang.html">Tentang</a>
+<a href="struktur.html">Struktur</a>
+<a href="galeri.html">Galeri</a>
+</nav>
+</header>
+<section class="hero">
+<h1>Selamat Datang di Website Karang Taruna BARET</h1>
+<p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
+</section>
+<section class="fitur">
+<div><h3>BARET</h3><p>Karang Taruna BARET aktif di bidang sosial dan kepemudaan.</p></div>
+<div><h3>Kegiatan</h3><p>Berbagai kegiatan positif dan pengembangan generasi muda.</p></div>
+<div><h3>Komunitas</h3><p>Menghubungkan pemuda Dusun Tempel dalam satu semangat.</p></div>
+</section>
+<!-- Tombol Sosial Media -->
+<div class="sosmed-buttons">
+<a class="instagram" href="https://www.instagram.com/brt_baretempel?igsh=NzZzazRjd3pzdGcx" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
     </a>
-    <a href="https://www.tiktok.com/@baret.barisan.rem" class="tiktok" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok
+<a class="tiktok" href="https://www.tiktok.com/@baret.barisan.rem" target="_blank">
+<i class="fab fa-tiktok"></i> TikTok
     </a>
+</div>
+<footer>
+<p>© 2025 Karang Taruna BARET. All rights reserved.</p>
+</footer>
 
-    <a href="https://chat.whatsapp.com/EnmUW7WknwNBwPO72iUF0u" class="whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Karang Taruna BARET. All rights reserved.</p>
-  </footer>
-</body>
+<div class="popup" id="myPopup">
+<div class="popup-content">
+<span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+<h3>Pengumuman Penting</h3>
+<p>
+      Jangan lupa seluruh pengurus &amp; anggota <strong>KARANG TARUNA BRT BARET</strong>.<br/>
+<strong>Besok tgl 12 April 2025</strong> mengikuti kegiatan <strong>HALAL BIHALAL</strong><br/>
+      di halaman Masjid <strong>NURUL YAQIN</strong>, Dusun Tempel.<br/><br/>
+      Terimakasih.
+    </p>
+</div>
+</div>
+<script>
+window.onload = function() {
+  document.getElementById("myPopup").style.display = "block";
+};
+</script></body>
 </html>
