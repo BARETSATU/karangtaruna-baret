@@ -1,75 +1,134 @@
+<button id="toggle-dark" class="dark-mode-btn">Mode Gelap</button>
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Karang Taruna BARET</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .sosmed-buttons {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .sosmed-buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .sosmed-buttons .instagram {
+      background-color: #E1306C;
+    }
+
+    .sosmed-buttons .instagram:hover {
+      background-color: #c6285d;
+    }
+
+    .sosmed-buttons .tiktok {
+      background-color: #000000;
+    }
+
+    .sosmed-buttons .tiktok:hover {
+      background-color: #333;
+    }
+  
+    .sosmed-buttons .whatsapp {
+      background-color: #25D366;
+    }
+
+    .sosmed-buttons .whatsapp:hover {
+      background-color: #1ebe5b;
+    }
+
+  
+    .sosmed-buttons a {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sosmed-buttons a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 150%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0));
+      animation: slide-light 4s ease-in-out infinite;
+    }
+
+    @keyframes slide-light {
+      0% {
+        left: -150%;
+      }
+      50% {
+        left: 100%;
+      }
+      100% {
+        left: 150%;
+      }
+    }
+
+  </style>
 </head>
+<!-- Tombol Mode Gelap -->
+<button onclick="toggleDarkMode()">Mode Gelap / Terang</button>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
 <body>
-  <header class="navbar">
-    <div class="logo">Karang Taruna BARET</div>
+  <header>
+    <img src="logo.gif" alt="Logo BARET" class="logo" />
     <nav>
-      <ul class="nav-links">
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#daftar">Daftar</a></li>
-      </ul>
-      <button id="modeToggle" class="mode-toggle">🌙</button>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="galeri.html">Galeri</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Selamat Datang di Karang Taruna BARET</h1>
-      <p>Organisasi kepemudaan Dusun Tempel sejak 1990</p>
-    </div>
+    <h1>Selamat Datang di Website Karang Taruna BARET</h1>
+    <p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
   </section>
 
-  <section id="tentang" class="section">
-    <h2>Tentang Kami</h2>
-    <p>Karang Taruna Tunas Harapan Tempel (BARET) adalah organisasi kepemudaan yang aktif dalam kegiatan sosial, budaya, dan pembangunan desa.</p>
+  <section class="fitur">
+    <div><h3>BARET</h3><p>Karang Taruna BARET aktif di bidang sosial dan kepemudaan.</p></div>
+    <div><h3>Kegiatan</h3><p>Berbagai kegiatan positif dan pengembangan generasi muda.</p></div>
+    <div><h3>Komunitas</h3><p>Menghubungkan pemuda Dusun Tempel dalam satu semangat.</p></div>
   </section>
 
-  <section id="galeri" class="section">
-    <h2>Galeri</h2>
-    <div class="gallery"><!-- Isi dari Firebase Storage --></div>
-  </section>
+  <!-- Tombol Sosial Media -->
+  <div class="sosmed-buttons">
+    <a href="https://www.instagram.com/brt_baretempel?igsh=NzZzazRjd3pzdGcx" class="instagram" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@baret.barisan.rem" class="tiktok" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
 
-  <section id="daftar" class="section">
-    <h2>Daftar Anggota</h2>
-    <form id="form-daftar">
-      <input type="text" placeholder="Nama Lengkap" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Alamat" required></textarea>
-      <button type="submit">Kirim</button>
-    </form>
-  </section>
+    <a href="https://chat.whatsapp.com/EnmUW7WknwNBwPO72iUF0u" class="whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Karang Taruna BARET</p>
+  <footer>
+    <p>&copy; 2025 Karang Taruna BARET. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById("modeToggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-    });
-  </script>
-
-<footer style="text-align: center; padding: 20px; background-color: #f0f0f0;">
-  <p>Ikuti kami di:</p>
-  <a href="https://www.instagram.com/brt_baretempel?igsh=NzZzazRjd3pzdGcx" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
-  </a>
-  <a href="https://www.tiktok.com/@baret.barisan.rem?_t=ZS-8va2UvzLPbb&_r=1" target="_blank" style="margin: 0 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/24/3046/3046121.png" alt="TikTok" />
-  </a>
-  <a href="https://chat.whatsapp.com/EnmUW7WknwNBwPO72iUF0u" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
-  </a>
-  <p style="margin-top: 10px;">&copy; 2025 Karang Taruna BARET - Tempel</p>
-</footer>
-
 </body>
 </html>
