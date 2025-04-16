@@ -1,125 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karang Taruna BARET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    .sosmed-buttons {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .sosmed-buttons a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      color: white;
-      transition: 0.3s;
-    }
-
-    .sosmed-buttons .instagram {
-      background-color: #E1306C;
-    }
-
-    .sosmed-buttons .instagram:hover {
-      background-color: #c6285d;
-    }
-
-    .sosmed-buttons .tiktok {
-      background-color: #000000;
-    }
-
-    .sosmed-buttons .tiktok:hover {
-      background-color: #333;
-    }
-  
-    .sosmed-buttons .whatsapp {
-      background-color: #25D366;
-    }
-
-    .sosmed-buttons .whatsapp:hover {
-      background-color: #1ebe5b;
-    }
-
-  
-    .sosmed-buttons a {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sosmed-buttons a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -150%;
-      width: 150%;
-      height: 100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0));
-      animation: slide-light 4s ease-in-out infinite;
-    }
-
-    @keyframes slide-light {
-      0% {
-        left: -150%;
-      }
-      50% {
-        left: 100%;
-      }
-      100% {
-        left: 150%;
-      }
-    }
-
-  </style>
 </head>
 <body>
-  <header>
-    <img src="logo.gif" alt="Logo BARET" class="logo" />
+
+  <header class="navbar">
+    <div class="logo">Karang Taruna BARET</div>
     <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="struktur.html">Struktur</a>
-      <a href="galeri.html">Galeri</a>
+      <ul class="nav-links">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#daftar">Daftar</a></li>
+      </ul>
+      <button id="modeToggle" class="mode-toggle">🌙</button>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Selamat Datang di Website Karang Taruna Tunas Harapan Tempel BARET</h1>
-    <p>Organisasi Pemuda Dusun Tempel sejak 1990</p>
+    <div class="hero-content">
+      <h1>Selamat Datang di Karang Taruna BARET</h1>
+      <p>Organisasi kepemudaan Dusun Tempel sejak 1990</p>
+    </div>
   </section>
 
-  <section class="fitur">
-    <div><h3>BARET</h3><p>Karang Taruna BARET aktif di bidang sosial dan kepemudaan.</p></div>
-    <div><h3>Kegiatan</h3><p>Berbagai kegiatan positif dan pengembangan generasi muda.</p></div>
-    <div><h3>Komunitas</h3><p>Menghubungkan pemuda Dusun Tempel dalam satu semangat.</p></div>
+  <section id="tentang" class="section">
+    <h2>Tentang Kami</h2>
+    <p>Karang Taruna Tunas Harapan Tempel (BARET) adalah organisasi kepemudaan yang berperan aktif dalam kegiatan sosial, budaya, dan pembangunan desa.</p>
   </section>
 
-  <!-- Tombol Sosial Media -->
-  <div class="sosmed-buttons">
-    <a href="https://www.instagram.com/brt_baretempel?igsh=NzZzazRjd3pzdGcx" class="instagram" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://www.tiktok.com/@baret.barisan.rem" class="tiktok" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok
-    </a>
+  <section id="galeri" class="section">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <!-- Gambar akan di-load dari Firebase Storage -->
+    </div>
+  </section>
 
-    <a href="https://chat.whatsapp.com/EnmUW7WknwNBwPO72iUF0u" class="whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-  </div>
+  <section id="daftar" class="section">
+    <h2>Daftar Anggota</h2>
+    <form id="form-daftar">
+      <input type="text" placeholder="Nama Lengkap" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Alamat" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Karang Taruna BARET. All rights reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2025 Karang Taruna BARET</p>
   </footer>
+
+  <!-- Toggle Dark Mode -->
+  <script>
+    document.getElementById("modeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+  <!-- Firebase SDK + Firestore -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "API_KEY_MU",
+      authDomain: "PROJECT_ID.firebaseapp.com",
+      projectId: "PROJECT_ID",
+      storageBucket: "PROJECT_ID.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("form-daftar");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nama = form.querySelector('input[placeholder="Nama Lengkap"]').value;
+      const email = form.querySelector('input[placeholder="Email"]').value;
+      const alamat = form.querySelector('textarea[placeholder="Alamat"]').value;
+
+      try {
+        await addDoc(collection(db, "pendaftaran"), {
+          nama,
+          email,
+          alamat,
+          waktu: new Date()
+        });
+        alert("Pendaftaran berhasil!");
+        form.reset();
+      } catch (error) {
+        console.error("Gagal menyimpan data:", error);
+        alert("Terjadi kesalahan, coba lagi.");
+      }
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karang Taruna BARET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Karang Taruna BARET</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#daftar">Daftar</a></li>
+      </ul>
+      <button id="modeToggle" class="mode-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Selamat Datang di Karang Taruna BARET</h1>
+      <p>Organisasi kepemudaan Dusun Tempel sejak 1990</p>
+    </div>
+  </section>
+
+  <section id="tentang" class="section">
+    <h2>Tentang Kami</h2>
+    <p>Karang Taruna Tunas Harapan Tempel (BARET) adalah organisasi kepemudaan yang berperan aktif dalam kegiatan sosial, budaya, dan pembangunan desa.</p>
+  </section>
+
+  <section id="galeri" class="section">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <!-- Gambar akan di-load dari Firebase Storage -->
+    </div>
+  </section>
+
+  <section id="daftar" class="section">
+    <h2>Daftar Anggota</h2>
+    <form id="form-daftar">
+      <input type="text" placeholder="Nama Lengkap" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Alamat" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Karang Taruna BARET</p>
+  </footer>
+
+  <!-- Toggle Dark Mode -->
+  <script>
+    document.getElementById("modeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+  <!-- Firebase SDK + Firestore -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "API_KEY_MU",
+      authDomain: "PROJECT_ID.firebaseapp.com",
+      projectId: "PROJECT_ID",
+      storageBucket: "PROJECT_ID.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("form-daftar");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nama = form.querySelector('input[placeholder="Nama Lengkap"]').value;
+      const email = form.querySelector('input[placeholder="Email"]').value;
+      const alamat = form.querySelector('textarea[placeholder="Alamat"]').value;
+
+      try {
+        await addDoc(collection(db, "pendaftaran"), {
+          nama,
+          email,
+          alamat,
+          waktu: new Date()
+        });
+        alert("Pendaftaran berhasil!");
+        form.reset();
+      } catch (error) {
+        console.error("Gagal menyimpan data:", error);
+        alert("Terjadi kesalahan, coba lagi.");
+      }
+    });
+  </script>
 </body>
 </html>
