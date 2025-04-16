@@ -1,75 +1,303 @@
-body {
-  font-family: Arial, sans-serif;
+/* Font dan Reset */
+* {
   margin: 0;
-  background: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #f5f5f5;
   color: #333;
+  line-height: 1.6;
 }
 
-header {
-  background: #2c0055;
-  color: white;
-  padding: 10px 20px;
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem 2rem;
 }
 
-header img.logo {
-  width: 100px;
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-nav a {
-  margin: 0 10px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
   text-decoration: none;
+  font-weight: 500;
+}
+
+.mode-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
   color: white;
-  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-nav a.active {
-  text-decoration: underline;
-}
-
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #5a189a, #7b2cbf);
-  color: white;
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 50px 20px;
+  background-color: #e0f0ff;
 }
 
-.fitur {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background: #fff;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.fitur div {
-  width: 30%;
-  background: #eee;
-  padding: 15px;
-  border-radius: 10px;
+.hero p {
+  font-size: 1.1rem;
 }
 
-.content {
-  padding: 20px;
-  background: #fff;
+/* Section General */
+.section {
+  padding: 2rem;
 }
 
-.struktur {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.posisi {
-  background: #ddd;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-footer {
-  background: #2c0055;
-  color: white;
+.section h2 {
   text-align: center;
-  padding: 10px;
+  margin-bottom: 1rem;
 }
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Formulir */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #333;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Mode Gelap */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background-color: #111;
+}
+
+body.dark .hero,
+body.dark .section {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+body.dark button[type="submit"] {
+  background-color: #3399ff;
+}
+
+body.dark button[type="submit"]:hover {
+  background-color: #2a80cc;
+}
+/* Font dan Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mode-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #e0f0ff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* Section General */
+.section {
+  padding: 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Formulir */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #333;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Mode Gelap */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background-color: #111;
+}
+
+body.dark .hero,
+body.dark .section {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+body.dark button[type="submit"] {
+  background-color: #3399ff;
+}
+
+body.dark button[type="submit"]:hover {
+  background-color: #2a80cc;
+}
+
