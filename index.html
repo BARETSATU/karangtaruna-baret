@@ -1,37 +1,30 @@
-
-<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karang Taruna BARET</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Chat Karang Taruna BARET</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="images/Untitled-1.gif" alt="Logo BARET" class="logo" />
-      <h1>Karang Taruna BARET</h1>
-    </div>
-    <div class="header-buttons">
-      <button class="login-btn">Masuk</button>
-      <button class="register-btn">Daftar</button>
-    </div>
-  </header>
+    <section id="chat-room">
+        <h2>Forum Chat Karang Taruna BARET</h2>
+        <div id="messages-container"></div>
 
-  <!-- Promo Slider -->
-  <section class="promo-slider">
-    <img src="images/promo.jpg" alt="Promo" class="promo-img" />
-  </section>
+        <!-- Form untuk mengirim pesan -->
+        <form id="chat-form">
+            <input type="text" id="message-input" placeholder="Tulis pesan..." required />
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+    <div id="auth-section">
+        <button id="login-btn" onclick="login()">Login</button>
+        <button id="logout-btn" onclick="logout()" style="display:none;">Logout</button>
+    </div>
 
-  <!-- Footer Navigation -->
-  <footer class="footer-nav">
-    <a href="#">Beranda</a>
-    <a href="#">Daftar</a>
-    <a href="#">Masuk</a>
-    <a href="#">Kontak</a>
-  </footer>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
