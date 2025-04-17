@@ -3,42 +3,86 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Struktur</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktur Organisasi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .struktur-bagan-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .struktur-bagan-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .struktur-bagan-container img:hover {
+      transform: scale(1.02);
+    }
+
+    .box {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+      margin: 10px auto;
+      padding: 12px;
+      max-width: 400px;
+      background: #f2f2f2;
+      border-radius: 8px;
+    }
+
+    .box:nth-child(1) { animation-delay: 0.2s; }
+    .box:nth-child(2) { animation-delay: 0.4s; }
+    .box:nth-child(3) { animation-delay: 0.6s; }
+    .box:nth-child(4) { animation-delay: 0.8s; }
+    .box:nth-child(5) { animation-delay: 1s; }
+    .box:nth-child(6) { animation-delay: 1.2s; }
+    .box:nth-child(7) { animation-delay: 1.4s; }
+    .box:nth-child(8) { animation-delay: 1.6s; }
+    .box:nth-child(9) { animation-delay: 1.8s; }
+    .box:nth-child(10) { animation-delay: 2s; }
+    .box:nth-child(11) { animation-delay: 2.2s; }
+    .box:nth-child(12) { animation-delay: 2.4s; }
+    .box:nth-child(13) { animation-delay: 2.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="Untitled-1.gif" alt="Logo Karang Taruna BARET" class="logo" />
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="struktur.html">Struktur</a>
-      <a href="galeri.html">Galeri</a>
-    </nav>
+    <h1>Struktur Organisasi Karang Taruna BARET</h1>
   </header>
-  <main>
-<h1>Struktur Organisasi</h1>
 
-<ul style="text-align: left; max-width: 600px; margin: 0 auto; padding-left: 0;">
-  <li><strong>Ketua:</strong> Sugiono</li>
-  <li><strong>Wakil Ketua:</strong> Joko</li>
-  <li><strong>Sekretaris 1:</strong> Supriyadi</li>
-  <li><strong>Sekretaris 2:</strong> Suroso</li>
-  <li><strong>Bendahara 1:</strong> Sihmadi</li>
-  <li><strong>Bendahara 2:</strong> Wahyu (IS)</li>
-  <li><strong>Bendahara 3:</strong> Devi Sekar R</li>
-  <li><strong>Seksi Humas:</strong> -</li>
-  <li><strong>Seksi Keamanan:</strong> -</li>
-  <li><strong>Seksi Agama:</strong> -</li>
-  <li><strong>Seksi Perlengkapan:</strong> -</li>
-  <li><strong>Admin Sosmed:</strong> -</li>
-  <li><strong>Seksi Kesenian:</strong> -</li>
-</ul>
-<p>Struktur organisasi Karang Taruna BARET terdiri dari ketua, wakil, bendahara, sekretaris, dan seksi-seksi.</p>
-  </main>
-  <footer>
-    <p>© 2025 Karang Taruna BARET. All rights reserved.</p>
-  </footer>
+  <section class="struktur-bagan-container">
+    <h2>Bagan Struktur Organisasi</h2>
+    <img src="images/struktur-bagan.jpg" alt="Bagan Struktur Organisasi Karang Taruna BARET">
+  </section>
+
+  <section class="struktur-interaktif">
+    <h2>Struktur Lengkap</h2>
+    <div class="box">Ketua: Sugiono</div>
+    <div class="box">Wakil Ketua: Joko</div>
+    <div class="box">Sekretaris 1: Supriyadi</div>
+    <div class="box">Sekretaris 2: Suroso</div>
+    <div class="box">Bendahara 1: Sihmadi</div>
+    <div class="box">Bendahara 2: Wahyu (IS)</div>
+    <div class="box">Bendahara 3: Devi Sekar R</div>
+    <div class="box">Seksi Humas</div>
+    <div class="box">Seksi Keamanan</div>
+    <div class="box">Seksi Agama</div>
+    <div class="box">Seksi Perlengkapan</div>
+    <div class="box">Admin Sosmed</div>
+    <div class="box">Seksi Kesenian</div>
+  </section>
+
 </body>
 </html>
