@@ -1,3 +1,4 @@
+
 /* Reset */
 * {
     margin: 0;
@@ -10,68 +11,30 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
     color: #fff;
-    line-height: 1.5;
 }
 
 /* Container */
 .container {
-    display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background-color: #1d1d1d;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+/* Header */
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-}
-
-.sidebar .logo img {
-    width: 150px;
-    margin-bottom: 30px;
-}
-
-.sidebar .menu {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar .menu li {
-    margin: 20px 0;
-}
-
-.sidebar .menu a {
-    text-decoration: none;
-    color: #f1c40f;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.sidebar .menu a:hover {
-    color: #e67e22;
-}
-
-/* Content */
-.content {
-    flex: 1;
-    padding: 30px;
-}
-
-.content .header {
     margin-bottom: 20px;
 }
 
-.content .header h1 {
-    color: #f1c40f;
+header .logo img {
+    width: 150px;
 }
 
 .user-info {
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
+    gap: 20px;
 }
 
 .user-info div {
@@ -79,29 +42,58 @@ body {
 }
 
 .user-info h3 {
-    font-size: 24px;
+    font-size: 18px;
     color: #f1c40f;
 }
 
 .user-info p {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 24px;
+    color: #fff;
 }
 
-/* Footer */
-footer {
+/* BARET Section */
+.mega-jackpot {
+    background-color: #e67e22;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mega-jackpot h2 {
+    font-size: 32px;
+    color: #fff;
+}
+
+.mega-jackpot p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation */
+.main-nav {
     background-color: #1d1d1d;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
 }
 
-footer .footer-menu a {
-    color: #f1c40f;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.main-nav ul {
+    list-style: none;
 }
 
-footer .footer-menu a:hover {
+.main-nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav ul li a {
+    color: #f1c40f;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
     color: #e67e22;
 }
