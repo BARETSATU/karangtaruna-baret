@@ -1,58 +1,21 @@
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #ffffff;
-  color: #000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
 }
+
 .logo-container {
-  background: #000;
-  text-align: center;
-  padding: 10px;
+    background-color: #000;
+    padding: 10px;
 }
+
 .logo {
-  max-height: 120px;
+    max-width: 100%;
+    height: auto;
 }
-.nav-bar {
-  background-color: #fff;
-  text-align: center;
-  padding: 10px 0;
-}
-.nav-bar a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #8000ff;
-  font-weight: bold;
-}
+
 .content {
-  padding: 20px;
-  text-align: center;
-}
-.info-box {
-  background-color: #f2f2f2;
-  margin: 15px auto;
-  padding: 15px;
-  max-width: 500px;
-  border-radius: 8px;
-}
-.sosmed-buttons {
-  margin-top: 20px;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 15px;
-  margin: 5px;
-  text-decoration: none;
-  color: white;
-  border-radius: 6px;
-}
-.instagram { background: #d6249f; }
-.tiktok { background: #000000; }
-.whatsapp { background: #25d366; }
-footer {
-  background-color: #8000ff;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+    padding: 20px;
 }
