@@ -3,51 +3,53 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Struktur Organisasi</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Struktur Organisasi Karang Taruna BARET</title>
   <style>
-    .struktur-bagan-container {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background: #fefefe;
+      color: #222;
+    }
+
+    h1, h2 {
       text-align: center;
-      margin-top: 2rem;
     }
 
-    .struktur-bagan-container img {
+    img.struktur-image {
+      display: block;
+      margin: 20px auto;
       max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
     }
 
-    .struktur-bagan-container img:hover {
-      transform: scale(1.02);
-    }
-
-    .box {
+    .struktur-item {
+      background: #f0f0f0;
+      margin: 10px auto;
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 8px;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeInUp 0.6s ease forwards;
-      margin: 10px auto;
-      padding: 12px;
-      max-width: 400px;
-      background: #f2f2f2;
-      border-radius: 8px;
+      animation: fadeInUp 0.6s forwards;
     }
 
-    .box:nth-child(1) { animation-delay: 0.2s; }
-    .box:nth-child(2) { animation-delay: 0.4s; }
-    .box:nth-child(3) { animation-delay: 0.6s; }
-    .box:nth-child(4) { animation-delay: 0.8s; }
-    .box:nth-child(5) { animation-delay: 1s; }
-    .box:nth-child(6) { animation-delay: 1.2s; }
-    .box:nth-child(7) { animation-delay: 1.4s; }
-    .box:nth-child(8) { animation-delay: 1.6s; }
-    .box:nth-child(9) { animation-delay: 1.8s; }
-    .box:nth-child(10) { animation-delay: 2s; }
-    .box:nth-child(11) { animation-delay: 2.2s; }
-    .box:nth-child(12) { animation-delay: 2.4s; }
-    .box:nth-child(13) { animation-delay: 2.6s; }
+    .struktur-item:nth-child(1) { animation-delay: 0.2s; }
+    .struktur-item:nth-child(2) { animation-delay: 0.4s; }
+    .struktur-item:nth-child(3) { animation-delay: 0.6s; }
+    .struktur-item:nth-child(4) { animation-delay: 0.8s; }
+    .struktur-item:nth-child(5) { animation-delay: 1s; }
+    .struktur-item:nth-child(6) { animation-delay: 1.2s; }
+    .struktur-item:nth-child(7) { animation-delay: 1.4s; }
+    .struktur-item:nth-child(8) { animation-delay: 1.6s; }
+    .struktur-item:nth-child(9) { animation-delay: 1.8s; }
+    .struktur-item:nth-child(10) { animation-delay: 2s; }
+    .struktur-item:nth-child(11) { animation-delay: 2.2s; }
+    .struktur-item:nth-child(12) { animation-delay: 2.4s; }
+    .struktur-item:nth-child(13) { animation-delay: 2.6s; }
+    .struktur-item:nth-child(14) { animation-delay: 2.8s; }
 
     @keyframes fadeInUp {
       to {
@@ -58,31 +60,24 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Struktur Organisasi Karang Taruna BARET</h1>
-  </header>
+  <h1>Struktur Organisasi Karang Taruna BARET</h1>
 
-  <section class="struktur-bagan-container">
-    <h2>Bagan Struktur Organisasi</h2>
-    <img src="images/struktur-bagan.jpg" alt="Bagan Struktur Organisasi Karang Taruna BARET">
-  </section>
+  <h2>Bagan Struktur Organisasi</h2>
+  <img src="images/struktur-bagan.png" alt="Bagan Struktur Organisasi Karang Taruna BARET" class="struktur-image" />
 
-  <section class="struktur-interaktif">
-    <h2>Struktur Lengkap</h2>
-    <div class="box">Ketua: Sugiono</div>
-    <div class="box">Wakil Ketua: Joko</div>
-    <div class="box">Sekretaris 1: Supriyadi</div>
-    <div class="box">Sekretaris 2: Suroso</div>
-    <div class="box">Bendahara 1: Sihmadi</div>
-    <div class="box">Bendahara 2: Wahyu (IS)</div>
-    <div class="box">Bendahara 3: Devi Sekar R</div>
-    <div class="box">Seksi Humas</div>
-    <div class="box">Seksi Keamanan</div>
-    <div class="box">Seksi Agama</div>
-    <div class="box">Seksi Perlengkapan</div>
-    <div class="box">Admin Sosmed</div>
-    <div class="box">Seksi Kesenian</div>
-  </section>
-
+  <h2>Struktur Lengkap</h2>
+  <div class="struktur-item">Ketua: Sugiono</div>
+  <div class="struktur-item">Wakil Ketua: Joko</div>
+  <div class="struktur-item">Sekretaris 1: Supriyadi</div>
+  <div class="struktur-item">Sekretaris 2: Suroso</div>
+  <div class="struktur-item">Bendahara 1: Sihmadi</div>
+  <div class="struktur-item">Bendahara 2: Wahyu (IS)</div>
+  <div class="struktur-item">Bendahara 3: Devi Sekar R</div>
+  <div class="struktur-item">Seksi Humas</div>
+  <div class="struktur-item">Seksi Keamanan</div>
+  <div class="struktur-item">Seksi Agama</div>
+  <div class="struktur-item">Seksi Perlengkapan</div>
+  <div class="struktur-item">Admin Sosmed</div>
+  <div class="struktur-item">Seksi Kesenian</div>
 </body>
 </html>
