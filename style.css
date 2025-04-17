@@ -32,32 +32,9 @@ nav a {
 nav a:hover {
   background-color: #5e0080;
 }
-h1 {
-  font-size: 24px;
-  margin-top: 20px;
+main {
+  padding: 20px;
 }
-.subheading {
-  font-size: 18px;
-  color: #333;
-}
-.box {
-  background: #eee;
-  margin: 15px auto;
-  padding: 10px;
-  max-width: 600px;
-  border-radius: 8px;
-}
-.btn {
-  display: inline-block;
-  padding: 8px 12px;
-  margin: 5px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.instagram { background: #E1306C; }
-.tiktok { background: #000000; }
-.whatsapp { background: #25D366; }
 footer {
   background: purple;
   color: white;
