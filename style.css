@@ -1,27 +1,79 @@
+
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.top-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: gold;
+  text-shadow: 1px 1px 4px black;
+}
+
+.overlay-text h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.status-bar {
+  background: #222;
   text-align: center;
-  background-color: #f9f9f9;
+  padding: 10px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.status-label {
+  color: gold;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   padding: 20px;
+  text-align: center;
 }
 
-h1, h2 {
-  margin-bottom: 10px;
+.menu-card {
+  background: #1e1e1e;
+  padding: 20px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px solid #333;
 }
 
-.struktur-img {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeSlideIn 1.5s ease-out forwards;
-}
-
-@keyframes fadeSlideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+  font-size: 12px;
 }
