@@ -1,0 +1,25 @@
+body {
+    /* Gunakan gambar lorong neon Anda sebagai background */
+    background-image: url('path/to/your/neon-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang header semi-transparan */
+}
+
+.user-info .balance {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 15px;
+}
+
+/* Lanjutkan styling untuk sidebar, tombol, dll. */
