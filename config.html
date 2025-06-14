@@ -1,0 +1,19 @@
+<title>config</title>
+<?php
+/* File: config.php */
+
+// Detail koneksi database
+$db_host = "localhost";     // Biasanya localhost
+$db_user = "root";          // Username default XAMPP
+$db_pass = "";              // Password default XAMPP (kosong)
+$db_name = "db_remajatempel"; // Nama database yang Anda buat
+
+// Membuat koneksi
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+// Cek koneksi
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+// echo "Koneksi database berhasil!"; // Hapus atau beri komentar setelah tes
+?>

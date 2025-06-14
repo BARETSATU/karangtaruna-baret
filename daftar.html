@@ -1,0 +1,131 @@
+<?php
+session_start(); // Mulai sesi untuk pesan feedback
+require_once 'config.php'; // Sertakan file koneksi database
+
+$errors = array(); // Array untuk menyimpan pesan error
+$success_message = ""; // Variabel untuk pesan sukses
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari form dan bersihkan (dasar)
+    $nama_lengkap = mysqli_real_escape_string($conn, $_POST['nama_lengkap_daftar']);
+    $email = mysqli_real_escape_string($conn, $_POST['email_daftar']);
+    $password_1 = mysqli_real_escape_string($conn, $_POST['password_daftar_form']);
+    $password_2 = mysqli_real_escape_string($conn, $_POST['konfirmasi_password_daftar']);
+
+    // Validasi dasar (bisa Anda kembangkan)
+    if (empty($nama_lengkap)) { array_push($errors, "Nama lengkap harus diisi"); }
+    if (empty($email)) { array_push($errors, "Email harus diisi"); }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($email)) { array_push($errors, "Format email tidak valid"); }
+    if (empty($password_1)) { array_push($errors, "Password harus diisi"); }
+    if ($password_1 != $password_2) { array_push($errors, "Konfirmasi password tidak cocok"); }
+    // Anda bisa menambahkan validasi panjang password, dll.
+
+    // Cek apakah email sudah ada
+    if (count($errors) == 0) { // Hanya lanjut jika tidak ada error validasi awal
+        $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+        $result = mysqli_query($conn, $user_check_query);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user) { // Jika user dengan email tersebut sudah ada
+            if ($user['email'] === $email) {
+                array_push($errors, "Email sudah terdaftar");
+            }
+        }
+    }
+
+    // Jika tidak ada error, daftarkan pengguna
+    if (count($errors) == 0) {
+        $password_hashed = password_hash($password_1, PASSWORD_DEFAULT); // Hash password
+
+        $query = "INSERT INTO users (nama_lengkap, email, password_hash, tanggal_daftar) 
+                  VALUES('$nama_lengkap', '$email', '$password_hashed', NOW())";
+
+        if (mysqli_query($conn, $query)) {
+            $success_message = "Pendaftaran berhasil! Silakan <a href='login.php'>login</a>.";
+            // Kosongkan form atau lakukan sesuatu setelah berhasil
+        } else {
+            array_push($errors, "Gagal mendaftar ke database: " . mysqli_error($conn));
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Baru - Barisan Remaja Tempel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <div class="header-left">
+                <img src="images/logo-baret.gif" alt="Logo Barisan Remaja Tempel" id="logo-header">
+                <h1>Pendaftaran Anggota Baru</h1>
+            </div>
+            </div>
+    </header>
+
+    <main>
+        <section id="register-form-section">
+            <h2>Buat Akun Anda</h2>
+            <p>Silakan isi detail di bawah ini untuk bergabung dengan kami.</p>
+            <section id="register-form-section">
+    <h2>Buat Akun Anda</h2>
+
+    <?php if (!empty($success_message)): ?>
+        <div class="pesan-sukses">
+            <?php echo $success_message; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (count($errors) > 0): ?>
+        <div class="pesan-error">
+            <?php foreach ($errors as $error): ?>
+                <p><?php echo $error; ?></p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+    <p>Silakan isi detail di bawah ini untuk bergabung dengan kami.</p>
+    <form action="daftar.php" method="post">
+        {/* ... sisa form Anda ... */}
+    </form>
+    {/* ... */}
+</section>
+            <form action="daftar.php" method="post">
+                    <label for="nama_lengkap_daftar">Nama Lengkap:</label><br>
+                    <input type="text" id="nama_lengkap_daftar" name="nama_lengkap_daftar" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email_daftar">Alamat Email:</label><br>
+                    <input type="email" id="email_daftar" name="email_daftar" required>
+                </div>
+                <br>
+                <div>
+                    <label for="password_daftar_form">Kata Sandi:</label><br> <input type="password" id="password_daftar_form" name="password_daftar_form" required>
+                </div>
+                <br>
+                <div>
+                    <label for="konfirmasi_password_daftar">Konfirmasi Kata Sandi:</label><br>
+                    <input type="password" id="konfirmasi_password_daftar" name="konfirmasi_password_daftar" required>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Daftar Akun" class="tombol">
+                </div>
+            </form>
+            <br>
+            <p>Sudah punya akun? <a href="login.html">Masuk di sini</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Barisan Remaja Tempel. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
