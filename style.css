@@ -233,14 +233,8 @@ header h1 {
     border-bottom: 1px solid rgba(255, 215, 0, 0.35);
     border-radius: 8px; 
     box-sizing: border-box; 
-}
-.social-media-section-beranda h3 { color: gold; margin-top: 0; margin-bottom: 25px; font-size: 1.4em; text-transform: uppercase; letter-spacing: 1.5px; }
-.social-
-/* ============================================== */
-/* == STYLE TAMBAHAN UNTUK TAMPILAN LOGIN BARU == */
-/* ============================================== */
 
-/* Styling untuk Navbar Paling Atas */
+
 .top-nav-bar {
     background-color: #1a1a1a; /* Warna hitam pekat seperti contoh */
     padding: 10px 0;
@@ -328,3 +322,5 @@ marquee {
     margin-top: 40px;
     margin-bottom: 40px;
 }
+.social-media-section-beranda h3 { color: gold; margin-top: 0; margin-bottom: 25px; font-size: 1.4em; text-transform: uppercase; letter-spacing: 1.5px; }
+.social-
